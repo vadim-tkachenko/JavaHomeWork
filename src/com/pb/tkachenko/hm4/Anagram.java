@@ -1,12 +1,18 @@
-package com.pb.tkachenko.hm4;
-
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Anagram {
     public static void main(String[] args) {
-        System.out.println(isAnagram("Аз есмь строка живу я мерой остр", "За семь морей ростка я вижу рост"));
-        System.out.println(isAnagram("Я в мире — сирота", "Я в Риме — Ариост"));
-        System.out.println(isAnagram("Я хочу жить в мире", "Ром жизнь круто"));
+        Scanner in = new Scanner(System.in);
+        System.out.print("Введите первое значение: ");
+        String s1 = in.nextLine();
+        System.out.print("Введите второе значение: ");
+        String s2 = in.nextLine();
+        if (isAnagram(s1, s2)) {
+            System.out.println("True");
+        } else {
+            System.out.println("False");
+        }
     }
 
     static boolean isAnagram(String str1, String str2) {

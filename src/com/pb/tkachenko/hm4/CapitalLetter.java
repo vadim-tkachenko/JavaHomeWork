@@ -1,11 +1,13 @@
 package com.pb.tkachenko.hm4;
 
 import java.util.Locale;
+import java.util.Scanner;
 
 public class CapitalLetter {
     public static void main(String[] args) {
-
-        String name = "истина — это то, что выдерживает проверку опытом. Эйнштейн А.";
+        Scanner in = new Scanner(System.in);
+        System.out.print("Введите необходимое значение: ");
+        String name = in.nextLine();
         for (int i = 0; i < name.length(); i++) {
             if (isLetterOrDigit(name.charAt(i)) && (i == 0 || !isLetterOrDigit(name.charAt(i - 1)))){
                 char[] nameChars = name.toCharArray();
