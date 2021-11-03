@@ -12,9 +12,9 @@ class Library {
         );
 
         List<Reader> readers = Arrays.asList(
-                new Reader("Vadim Tkachenko", 0, "facultet clounov", "10002.10.12", "911"),
-                new Reader("Vadim Tkachenko1", 0, "facultet clounov", "10002.10.12", "911"),
-                new Reader("Vadim Tkachenko2", 0, "facultet clounov", "10002.10.12", "911")
+                new Reader("Виталий Сирик", 0, "Слизорин", "2007.10.12", "911"),
+                new Reader("Вадим Ткаченко", 1, "Слизорин", "2007.10.12", "911"),
+                new Reader("Сергей Нежурин", 2, "Слизорин", "2007.10.12", "911")
         );
 
         System.out.println("Книги: ");
@@ -26,7 +26,7 @@ class Library {
         System.out.println("\n Читатели: ");
         for (Reader reader : readers)
         {
-            System.out.printf("\t %s \n", reader.fullName);
+            System.out.printf("\t %s %d %s %s %s \n", reader.fullName, reader.id, reader.faculty, reader.birthday, reader.phoneNumber);
         }
 
         String[] testBookNames = { "Король лев", "Истории отца Посполита", "Бандера" };
